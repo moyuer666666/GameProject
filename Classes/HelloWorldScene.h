@@ -1,44 +1,36 @@
-/****************************************************************************
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
- 
- http://www.cocos2d-x.org
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
- ****************************************************************************/
-
 #ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "controllers/GameController.h"
 
+/**
+ * @class HelloWorld
+ * @brief 游戏的主场景。
+ * @details 作为游戏的入口场景，它的主要职责是创建背景、UI面板，
+ *          并初始化和持有游戏主控制器(GameController)。
+ */
 class HelloWorld : public cocos2d::Scene
 {
 public:
-    static cocos2d::Scene* createScene();
+    /**
+     * @brief 静态工厂方法，用于创建场景实例。
+     * @return 自动释放的场景实例。
+     */
+    static cocos2d::Scene *createScene();
 
+    /**
+     * @brief 场景的初始化方法。
+     * @return 初始化成功返回true，否则返回false。
+     */
     virtual bool init();
-    
-    // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
-    
-    // implement the "static create()" method manually
+
+    // Cocos2d-x宏，用于快速实现create方法
     CREATE_FUNC(HelloWorld);
+
+private:
+    // 游戏主控制器实例
+    GameController *_gameController;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

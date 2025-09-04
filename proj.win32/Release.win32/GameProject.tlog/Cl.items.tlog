@@ -1,0 +1,10 @@
+D:\Cproject\Company\GameProject\Classes\AppDelegate.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\AppDelegate.obj
+D:\Cproject\Company\GameProject\Classes\configs\loaders\LevelConfigLoader.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\LevelConfigLoader.obj
+D:\Cproject\Company\GameProject\Classes\controllers\GameController.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\GameController.obj
+D:\Cproject\Company\GameProject\Classes\HelloWorldScene.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\HelloWorldScene.obj
+D:\Cproject\Company\GameProject\Classes\managers\UndoManager.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\UndoManager.obj
+D:\Cproject\Company\GameProject\Classes\services\CardMatchService.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\CardMatchService.obj
+D:\Cproject\Company\GameProject\Classes\services\GameModelFromLevelGenerator.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\GameModelFromLevelGenerator.obj
+D:\Cproject\Company\GameProject\Classes\views\CardView.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\CardView.obj
+D:\Cproject\Company\GameProject\Classes\views\GameView.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\GameView.obj
+D:\Cproject\Company\GameProject\proj.win32\main.cpp;D:\Cproject\Company\GameProject\proj.win32\Release.win32\main.obj

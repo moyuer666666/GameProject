@@ -1,64 +1,43 @@
-/****************************************************************************
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
- 
- http://www.cocos2d-x.org
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
- ****************************************************************************/
-
-#ifndef  _APP_DELEGATE_H_
-#define  _APP_DELEGATE_H_
+#ifndef _APP_DELEGATE_H_
+#define _APP_DELEGATE_H_
 
 #include "cocos2d.h"
 
 /**
-@brief    The cocos2d Application.
-
-Private inheritance here hides part of interface from Director.
-*/
-class  AppDelegate : private cocos2d::Application
+ * @class AppDelegate
+ * @brief Cocos2d-x应用程序的代理类。
+ * @details 这是应用程序的入口点，负责初始化Director、OpenGL视图（GLView）
+ *          以及启动第一个场景。它还处理应用程序进入后台和返回前台的生命周期事件。
+ */
+class AppDelegate : private cocos2d::Application
 {
 public:
     AppDelegate();
     virtual ~AppDelegate();
 
+    /**
+     * @brief 初始化OpenGL上下文属性。
+     */
     virtual void initGLContextAttrs();
 
     /**
-    @brief    Implement Director and Scene init code here.
-    @return true    Initialize success, app continue.
-    @return false   Initialize failed, app terminate.
-    */
+     * @brief 实现Director和Scene的初始化代码。
+     * @return true 初始化成功，应用继续运行。
+     * @return false 初始化失败，应用终止。
+     */
     virtual bool applicationDidFinishLaunching();
 
     /**
-    @brief  Called when the application moves to the background
-    @param  the pointer of the application
-    */
+     * @brief 当应用程序进入后台时被调用。
+     * @param application 应用程序实例指针。
+     */
     virtual void applicationDidEnterBackground();
 
     /**
-    @brief  Called when the application reenters the foreground
-    @param  the pointer of the application
-    */
+     * @brief 当应用程序返回前台时被调用。
+     * @param application 应用程序实例指针。
+     */
     virtual void applicationWillEnterForeground();
 };
 
 #endif // _APP_DELEGATE_H_
-
